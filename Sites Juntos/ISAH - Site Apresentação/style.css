@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  color: #333;
+  opacity: 1;
+}
+
+body.carrega{
+  animation: sair 1s forwards;
+}
+
+
+@keyframes sair{
+  to{
+    opacity: 0;
+  }
+}
+
+
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+header h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #555caf;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.left {
+  max-width: 550px;
+}
+
+.tag {
+  background: #abb0de;
+  color: #2d2f44;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: 62px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.hero h1 span {
+  color: #2d2f44;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+#btn-primary {
+  background: #2d2f44;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* WEATHER CARD */
+
+.clima{
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 360px;
+  height: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.clima:hover{
+  transform: scale(1.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  background-color:#55556990;
+  color: white;
+}
+
+
+.temp {
+  position: relative;
+  font-size: 30px;
+  margin: 0px 0;
+}
+
+.weather-info{
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  color: #666;
+  width: 100%;
+  height: 100%;
+}
+
+#velocidade-vento,
+#umidade-ar{
+  display:inline;
+  width: 100%;
+  height: 100%;
+  padding: 33px;
+  color: lightgray;
+}
+/* HISTORY */
+
+#history {
+  padding: 100px 60px;
+  max-width: 1000px;
+}
+
+.subtitle {
+  color: #2d2f44;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#history h2,
+#goals h2,
+#products h2 {
+  font-size: 58px;
+  font-weight: 300;
+  margin: 25px 0;
+  color: #111;
+}
+
+#history h2 span,
+#goals h2 span,
+#products h2 span
+#time h2 span{
+  font-weight: 700;
+}
+
+#history p {
+  font-size: 24px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #434b9f!important;
+}
+
+/* GOALS */
+
+#goals {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.description {
+  max-width: 700px;
+  margin: 20px auto 70px;
+  font-size: 22px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  width: 360px;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  background: #2d2f44;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.card h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* PRODUCTS */
+
+#products {
+  padding: 100px 60px;
+  text-align: center;
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  text-align: left;
+  border: 1px solid #ececec;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.product-icon {
+  min-width: 55px;
+  height: 55px;
+  background: #eef0ff;
+  color: #2d2f44;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.product-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA */
+
+.cta-box {
+  margin-top: 90px;
+  background: linear-gradient(135deg, #2d2f44, #4a4f9f);
+  padding: 80px 40px;
+  border-radius: 30px;
+  color: white;
+}
+
+.cta-box h3 {
+  font-size: 52px;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.cta-box p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.cta-box button {
+  background: white;
+  color: #5a60d1;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-box button:hover {
+  transform: scale(1.05);
+}
+
+
+/*------Time-------*/
+
+
+ .subtitle-time{
+  color: #2d2f44;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-top: 2.5%;
+ }
+
+.time-cor{
+  padding: 0.3%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 50px rgba(0,0,0,0.12);
+  margin-bottom: 200px;
+  border-radius: 50px;
+  width: 100%;
+  height: 750px;
+}
+
+
+.box{
+  display: inline-table;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  margin-top: 50px;
+  transition: 0.09s ease;
+  border-radius: 70px;
+}
+
+.box:hover{
+  box-shadow: 0 0 30px rgba(0,0,0,0.12);
+  border-radius: 70px;
+  transform: scale(1.1);
+  transition: 0.04s ease;
+}
+
+img{
+  height: 93px;
+  margin-top: 20px;
+}
+
+.box span{
+  color: #2d2f44;
+}
+
+.text-apresentation{
+  color: rgb(65, 64, 64);
+  font-size: 19px;
+  width: 100%;
+}
+
