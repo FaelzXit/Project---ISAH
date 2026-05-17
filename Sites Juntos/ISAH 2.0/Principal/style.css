@@ -13,12 +13,8 @@
 
 body {
 
-    /* background: linear-gradient(90deg, rgb(255, 255, 255), rgb(234, 232, 255));  */
-    background-image: url(./img/ChatGPT\ Image\ 18\ de\ abr.\ de\ 2026\,\ 20_26_37.png);
-
+background-image: url(./img/ChatGPT\ Image\ 18\ de\ abr.\ de\ 2026\,\ 20_26_37.png)
 }
-
-
 
 /*---------BARRA DE NAVEGAÇÃO--------------------*/
 
@@ -128,7 +124,7 @@ body {
 }
 
 .group-sections section {
-    width: 170px;
+    width: 180px;
     height: 170px;
 }
 
@@ -400,4 +396,153 @@ select option {
 
 .default{
     display: none;
+}
+
+
+/* RESPONSIVO */
+
+/* RESPONSIVO */
+
+@media (max-width: 1024px){
+
+    .ambiente-dropdown{
+        margin: 8.5% 50%;
+        transform: scale(0.9);
+    }
+
+}
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-bar{
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .ul-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        gap: 15px;
+    }
+
+    .group-li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .link-nav-user-left,
+    .link-nav-sun-left,
+    #weather,
+    #city-name{
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+
+    #city-name{
+        width: 220px;
+    }
+
+    .text-apresentation{
+        position: relative;
+        margin: 10% 5%;
+    }
+
+    #light{
+        left: 5%;
+        margin-top: 5%;
+    }
+
+    .temperature{
+        left: 55%;
+        margin-top: 5%;
+    }
+
+    .trash{
+        left: 5%;
+        margin-top: 60%;
+    }
+
+    .add{
+        left: 55%;
+        margin-top: 60%;
+    }
+
+    .group-sections section{
+        width: 140px;
+        height: 140px;
+    }
+
+    .ambiente-dropdown{
+        position: relative;
+        margin: 120% auto 40px auto;
+        left: 0;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .ambiente-dropdown select{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    .welcome{
+        font-size: 30px;
+    }
+
+    .text-initial{
+        font-size: 15px;
+    }
+
+    #light{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10%;
+    }
+
+    .temperature{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 65%;
+    }
+
+    .trash{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 120%;
+    }
+
+    .add{
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 175%;
+    }
+
+    .group-sections section{
+        width: 180px;
+        height: 180px;
+    }
+
+    .ambiente-dropdown{
+        margin-top: 250%;
+        width: 95%;
+        height: 350px;
+    }
+
+    .ambiente-dropdown select{
+        font-size: 18px;
+    }
+
 }
